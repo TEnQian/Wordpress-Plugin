@@ -833,8 +833,8 @@ class My_Widget_3 extends Widget_Base
         $field_type = $item["field_type"];
         $post_type = $settings["querySource"];
         $paged = max(0, get_query_var("paged"), get_query_var("page"));
-        $next_link = get_permalink() . "" . custom_next_page($paged);
-        $prev_link = get_permalink() . "" . custom_prev_page($paged);
+        $next_link = get_permalink() . "page/" . custom_next_page($paged);
+        $prev_link = get_permalink() . "page/" . custom_prev_page($paged);
         $next_page = custom_next_page($paged) - 2;
         $prev_page = custom_prev_page($paged) + 2;
         if ($paged == 0) {
@@ -955,19 +955,19 @@ class My_Widget_3 extends Widget_Base
                         if ($choose == "posttitle") {
                             echo $posttitle;
                         } 
-			else if ($choose == "postcontent") {
+                        else if ($choose == "postcontent") {
                             echo $postcontent;
-                        }
-			else if ($choose == "postimage") {
+                        } 
+                        else if ($choose == "postimage") {
                             echo $postimage;
-                        }
-			else if ($choose == "acffield") {
+                        } 
+                        else if ($choose == "acffield") {
                             echo $acf;
-                        }
-			else if ($choose == "date") {
+                        } 
+                        elseif ($choose == "date") {
                             echo $postdate;
-                        }
-			else if ($choose == "author") {
+                        } 
+                        else if ($choose == "author") {
                             echo $postauthor;
                         }
                     }
@@ -982,7 +982,7 @@ class My_Widget_3 extends Widget_Base
             if ("yes" === $settings["pagination"]) {
                 echo '<div class="navigation-link"><div class="the-pagination"><a class="prev-page" href="'.$prev_link.'">Prev</a></div>';
                 for ($i = 1; $i <= $max; $i++) {
-                    echo '<a class="the-pagination-numbers the-pagination" href="'.get_permalink()."".$i.'">'.$i."</a>";
+                    echo '<a class="the-pagination-numbers the-pagination" href="'.get_permalink()."page/".$i.'">'.$i."</a>";
                 }
                 echo '<div class="the-pagination"><a class="next-page" href="'.$next_link.'">Next</a></div></div>';
             }
