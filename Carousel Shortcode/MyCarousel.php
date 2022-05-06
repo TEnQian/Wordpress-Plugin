@@ -17,8 +17,6 @@ function mySlider(){
 		<span class="arrow next"><i class="fa-solid fa-chevron-right"></i></span>
 	</div>
 </div>
-
-
 <style>
 	.slider-container{
 		width:100%;
