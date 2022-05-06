@@ -9,7 +9,6 @@
  */
 
 add_action('admin_menu','addMenu');
-
 function addMenu(){
     add_menu_page("CountDownplugin","CountDownplugin","manage_options","CountDownplugin","displayPage",null,1);
 }
