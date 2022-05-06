@@ -20,7 +20,7 @@ class My_Post_Elementor_Widgets {
 	}
 	
 	protected function __construct() {
-		require_once('postwidgetcontent.php');
+		require_once('PostWidgetContent.php');
 		add_action( 'elementor/widgets/widgets_registered', [ $this, 'register_widgets' ] );
 	}
 
